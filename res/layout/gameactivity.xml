@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:background="@drawable/gamegrid"
+                android:id="@+id/gameGrid">
+
+
+
+
+    <!--<GridView xmlns:android="http://schemas.android.com/apk/res/android"-->
+          <!--android:id="@+id/gridview"-->
+          <!--android:layout_width="250dp"-->
+          <!--android:layout_height="fill_parent"-->
+          <!--android:columnWidth="90dp"-->
+          <!--android:numColumns="3"-->
+          <!--android:verticalSpacing="15dp"-->
+          <!--android:horizontalSpacing="10dp"-->
+          <!--android:stretchMode="columnWidth"-->
+          <!--android:gravity="center"-->
+          <!--android:background="@drawable/gamegrid"-->
+          <!--android:layout_gravity="center"-->
+          <!--android:layout_centerHorizontal="true" android:layout_alignParentTop="true" android:layout_marginTop="17dp"/>-->
+
+    <ImageButton
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/foodImageTopLeft"
+            android:layout_alignLeft="@+id/foodImageMidleft" android:layout_alignParentTop="true"
+            android:layout_marginTop="95dp"
+            android:background="@null"/>
+
+    <ImageButton android:layout_width="45dp"
+               android:layout_height="45dp"
+               android:id="@+id/foodImageTopMid"
+               android:layout_alignParentLeft="true"
+               android:layout_marginLeft="130dp"
+               android:layout_alignTop="@+id/foodImageTopLeft"
+               android:background="@null"/>
+
+    <ImageButton android:layout_width="45dp"
+               android:layout_height="45dp"
+               android:id="@+id/foodImageTopRight"
+               android:layout_alignParentLeft="true" android:layout_marginLeft="210dp"
+               android:layout_alignTop="@+id/foodImageTopLeft"
+               android:background="@null"/>
+
+    <ImageButton android:layout_width="45dp"
+               android:layout_height="45dp"
+               android:id="@+id/foodImageMidleft"
+               android:layout_alignParentLeft="true"
+               android:layout_marginLeft="38dp"
+               android:layout_alignParentTop="true"
+               android:layout_marginTop="215dp"
+               android:background="@null"/>
+
+    <ImageButton android:layout_width="45dp"
+               android:layout_height="45dp" android:id="@+id/foodImageMidMid"
+               android:layout_centerHorizontal="true" android:layout_alignTop="@+id/foodImageMidleft"
+               android:background="@null"/>
+
+    <ImageButton android:layout_width="45dp"
+               android:layout_height="45dp" android:id="@+id/foodImageMidRight"
+               android:layout_alignRight="@+id/foodImageTopRight" android:layout_alignTop="@+id/foodImageMidleft"
+               android:background="@null"/>
+
+    <ImageButton android:layout_width="45dp"
+               android:layout_height="45dp" android:id="@+id/foodImageButtomLeft"
+               android:layout_alignLeft="@+id/foodImageTopLeft" android:layout_alignParentTop="true"
+               android:layout_marginTop="335dp"
+               android:background="@null"/>
+
+    <ImageButton android:layout_width="45dp"
+               android:layout_height="45dp" android:id="@+id/foodImageButtomMid"
+               android:layout_centerHorizontal="true" android:layout_alignTop="@+id/foodImageButtomLeft"
+               android:background="@null"/>
+
+    <ImageButton android:layout_width="45dp"
+               android:layout_height="45dp" android:id="@+id/foodImageButtomRight"
+               android:layout_alignLeft="@+id/foodImageTopRight" android:layout_alignTop="@+id/foodImageButtomLeft"
+               android:background="@null"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:id="@+id/cleanButton"
+            android:layout_alignParentTop="@+id/gamegrid"/>
+
+
+</RelativeLayout>
