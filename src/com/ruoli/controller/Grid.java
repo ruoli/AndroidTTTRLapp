@@ -29,7 +29,7 @@ public class Grid
     }
 
     public void addObjectToMap(int x, int y, String xo) {
-        if(getObjectFromCertainPosition(x,y).equals(""))
+        if(getObjectFromCertainPosition(x,y).equals("") && (!checkTheWinner().equals("O wins the game") || !checkTheWinner().equals("x wins the game")))
             map[x][y] = xo;
     }
 

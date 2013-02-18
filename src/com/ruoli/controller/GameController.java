@@ -7,48 +7,45 @@ package com.ruoli.controller;
  * Time: 16:37
  * To change this template use File | Settings | File Templates.
  */
-public class GameController {  //extend grid, make abstract
-    Grid grid;
+public class GameController extends Grid{  //extend grid, make abstract
+
     String LogicFoodType, actualFoodMsgForGUI;
     Boolean oTurn = true;
     String winner = "";
 
     public GameController(){
-        grid = new Grid();
+        super();
         LogicFoodType = checkWhoMovesFirst();
     }
 
     private String checkWhoMovesFirst() {
         String s = null;
-        if (grid.initCheckGridIsEmpty())
+        if (super.initCheckGridIsEmpty())
             s = "o";
         return s;
     }
 
-    public void addFood(int x, int y) { //point class, and refact
-        if (oTurn){
-                grid.addObjectToMap(x,y, LogicFoodType);
-                oTurn = false;
-                actualFoodMsgForGUI = "o";
-                LogicFoodType = "x";
-                winner = grid.checkTheWinner();
-        }
-        else{
-                grid.addObjectToMap(x,y, LogicFoodType);
-                oTurn = true;
-                actualFoodMsgForGUI = "x";
-                LogicFoodType ="o";
-                winner = grid.checkTheWinner();
+    public void addFoodToGridAndCheckWinnder(int x, int y) { //point class, and refact
+        if (oTurn) {
+            isMyTurnDoTheMovement("o", "x", x, y);
+            winner = super.checkTheWinner();
+        } else {
+            isMyTurnDoTheMovement("x", "o", x, y);
+            winner = super.checkTheWinner();
+            
         }
 
+    }
+
+    private void isMyTurnDoTheMovement(String foodForGUI, String foodForBackend, int gridPositionX, int gridPoistionY){
+        super.addObjectToMap(gridPositionX, gridPoistionY, LogicFoodType);
+        oTurn = false;
+        actualFoodMsgForGUI = foodForGUI;
+        LogicFoodType = foodForBackend;
     }
 
     public String getActualFoodMsgForGUI() {
         return actualFoodMsgForGUI;
-    }
-
-    public void cleanGameMap(){
-        grid.clearMap();
     }
 
     public String getWinner() {
@@ -56,6 +53,6 @@ public class GameController {  //extend grid, make abstract
     }
 
     public Boolean isRatAlreadyHasFood(int x, int y){
-        return (!grid.getObjectFromCertainPosition(x, y).equals(""));
+        return (!super.getObjectFromCertainPosition(x, y).equals(""));
     }
 }

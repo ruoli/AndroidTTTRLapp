@@ -71,7 +71,7 @@ public class GameActivity extends Activity implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.foodImageTopLeft:
                 if (!gameController.isRatAlreadyHasFood(0, 0)) {
-                    gameController.addFood(0, 0);
+                    gameController.addFoodToGridAndCheckWinnder(0, 0);
                     drawFood(gridTopLeft, v);
                     winningMsg();
                 }
@@ -79,7 +79,7 @@ public class GameActivity extends Activity implements View.OnClickListener {
 
             case R.id.foodImageTopMid:
                 if (!gameController.isRatAlreadyHasFood(0, 1)) {
-                    gameController.addFood(0, 1);
+                    gameController.addFoodToGridAndCheckWinnder(0, 1);
                     drawFood(gridTopMid, v);
                     winningMsg();
                 }
@@ -87,7 +87,7 @@ public class GameActivity extends Activity implements View.OnClickListener {
 
             case R.id.foodImageTopRight:
                 if (!gameController.isRatAlreadyHasFood(0, 2)) {
-                    gameController.addFood(0, 2);
+                    gameController.addFoodToGridAndCheckWinnder(0, 2);
                     drawFood(gridTopRight, v);
                     winningMsg();
                 }
@@ -95,7 +95,7 @@ public class GameActivity extends Activity implements View.OnClickListener {
 
             case R.id.foodImageMidleft:
                 if (!gameController.isRatAlreadyHasFood(1, 0)) {
-                    gameController.addFood(1, 0);
+                    gameController.addFoodToGridAndCheckWinnder(1, 0);
                     drawFood(gridMidLeft, v);
                     winningMsg();
                 }
@@ -103,7 +103,7 @@ public class GameActivity extends Activity implements View.OnClickListener {
 
             case R.id.foodImageMidMid:
                 if (!gameController.isRatAlreadyHasFood(1, 1)) {
-                    gameController.addFood(1, 1);
+                    gameController.addFoodToGridAndCheckWinnder(1, 1);
                     drawFood(gridMidMid, v);
                     winningMsg();
                 }
@@ -111,7 +111,7 @@ public class GameActivity extends Activity implements View.OnClickListener {
 
             case R.id.foodImageMidRight:
                 if (!gameController.isRatAlreadyHasFood(1, 2)) {
-                    gameController.addFood(1, 2);
+                    gameController.addFoodToGridAndCheckWinnder(1, 2);
                     drawFood(gridMidRight, v);
                     winningMsg();
                 }
@@ -119,7 +119,7 @@ public class GameActivity extends Activity implements View.OnClickListener {
 
             case R.id.foodImageButtomLeft:
                 if (!gameController.isRatAlreadyHasFood(2, 0)) {
-                    gameController.addFood(2, 0);
+                    gameController.addFoodToGridAndCheckWinnder(2, 0);
                     drawFood(gridButtomLeft, v);
                     winningMsg();
                 }
@@ -127,7 +127,7 @@ public class GameActivity extends Activity implements View.OnClickListener {
 
             case R.id.foodImageButtomMid:
                 if (!gameController.isRatAlreadyHasFood(2, 1)) {
-                    gameController.addFood(2, 1);
+                    gameController.addFoodToGridAndCheckWinnder(2, 1);
                     drawFood(gridButtonMid, v);
                     winningMsg();
                 }
@@ -135,7 +135,7 @@ public class GameActivity extends Activity implements View.OnClickListener {
 
             case R.id.foodImageButtomRight:
                 if (!gameController.isRatAlreadyHasFood(2, 2)) {
-                    gameController.addFood(2, 2);
+                    gameController.addFoodToGridAndCheckWinnder(2, 2);
                     drawFood(gridButtonRight, v);
                     winningMsg();
                 }
@@ -150,7 +150,7 @@ public class GameActivity extends Activity implements View.OnClickListener {
 
     private void cleanGameMap(ImageButton ib, View v) {
         ib.setImageDrawable(v.getResources().getDrawable(R.drawable.listempty));
-        gameController.cleanGameMap();
+        gameController.clearMap();
     }
 
     private void drawFood(ImageButton ib, View v) {
