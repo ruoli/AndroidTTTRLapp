@@ -1,13 +1,18 @@
 package com.ruoli.main;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.*;
-import com.ruoli.controller.GameController;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.Toast;
+
+import com.ruoli.controller.GameController;
 
 /**
  * Created with IntelliJ IDEA.
@@ -18,7 +23,7 @@ import java.util.List;
  */
 public class GameActivity extends Activity implements View.OnClickListener {
     ImageButton gridTopLeft, gridTopMid, gridTopRight, gridMidLeft, gridMidMid, gridMidRight, gridButtomLeft, gridButtonMid, gridButtonRight;
-    Button cleanButton;
+    //Button cleanButton;
     GameController gameController;
 
     List<ImageButton> imageButtonList;
@@ -26,15 +31,6 @@ public class GameActivity extends Activity implements View.OnClickListener {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gameactivity);
-
-//        GridView gridView = (GridView)findViewById(R.id.gridview);
-//        gridView.setAdapter(new ImageAdapter(this));
-//
-//        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-//                Toast.makeText(GameActivity.this, "" + position, Toast.LENGTH_SHORT).show();
-//            }
-//        });
 
         gridTopLeft = (ImageButton)findViewById(R.id.foodImageTopLeft);
         gridTopLeft.setOnClickListener(this);
@@ -57,109 +53,13 @@ public class GameActivity extends Activity implements View.OnClickListener {
         gridButtonRight = (ImageButton)findViewById(R.id.foodImageButtomRight);
         gridButtonRight.setOnClickListener(this);
 
-        cleanButton = (Button)findViewById(R.id.cleanButton);
-        cleanButton.setOnClickListener(this);
+//        cleanButton = (Button)findViewById(R.id.cleanButton);
+//        cleanButton.setOnClickListener(this);
 
         gameController = new GameController();
 
         initImageButtonList();
 
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.foodImageTopLeft:
-                if (!gameController.isRatAlreadyHasFood(0, 0)) {
-                    gameController.addFoodToGridAndCheckWinnder(0, 0);
-                    drawFood(gridTopLeft, v);
-                    winningMsg();
-                }
-                break;
-
-            case R.id.foodImageTopMid:
-                if (!gameController.isRatAlreadyHasFood(0, 1)) {
-                    gameController.addFoodToGridAndCheckWinnder(0, 1);
-                    drawFood(gridTopMid, v);
-                    winningMsg();
-                }
-                break;
-
-            case R.id.foodImageTopRight:
-                if (!gameController.isRatAlreadyHasFood(0, 2)) {
-                    gameController.addFoodToGridAndCheckWinnder(0, 2);
-                    drawFood(gridTopRight, v);
-                    winningMsg();
-                }
-                break;
-
-            case R.id.foodImageMidleft:
-                if (!gameController.isRatAlreadyHasFood(1, 0)) {
-                    gameController.addFoodToGridAndCheckWinnder(1, 0);
-                    drawFood(gridMidLeft, v);
-                    winningMsg();
-                }
-                break;
-
-            case R.id.foodImageMidMid:
-                if (!gameController.isRatAlreadyHasFood(1, 1)) {
-                    gameController.addFoodToGridAndCheckWinnder(1, 1);
-                    drawFood(gridMidMid, v);
-                    winningMsg();
-                }
-                break;
-
-            case R.id.foodImageMidRight:
-                if (!gameController.isRatAlreadyHasFood(1, 2)) {
-                    gameController.addFoodToGridAndCheckWinnder(1, 2);
-                    drawFood(gridMidRight, v);
-                    winningMsg();
-                }
-                break;
-
-            case R.id.foodImageButtomLeft:
-                if (!gameController.isRatAlreadyHasFood(2, 0)) {
-                    gameController.addFoodToGridAndCheckWinnder(2, 0);
-                    drawFood(gridButtomLeft, v);
-                    winningMsg();
-                }
-                break;
-
-            case R.id.foodImageButtomMid:
-                if (!gameController.isRatAlreadyHasFood(2, 1)) {
-                    gameController.addFoodToGridAndCheckWinnder(2, 1);
-                    drawFood(gridButtonMid, v);
-                    winningMsg();
-                }
-                break;
-
-            case R.id.foodImageButtomRight:
-                if (!gameController.isRatAlreadyHasFood(2, 2)) {
-                    gameController.addFoodToGridAndCheckWinnder(2, 2);
-                    drawFood(gridButtonRight, v);
-                    winningMsg();
-                }
-                break;
-
-            case R.id.cleanButton:
-                for (int i=0; i <imageButtonList.size(); i++)
-                     cleanGameMap(imageButtonList.get(i), v);
-                break;
-        }
-    }
-
-    private void cleanGameMap(ImageButton ib, View v) {
-        ib.setImageDrawable(v.getResources().getDrawable(R.drawable.listempty));
-        gameController.clearMap();
-    }
-
-    private void drawFood(ImageButton ib, View v) {
-        if(gameController.getActualFoodMsgForGUI().equals("o")){
-                ib.setImageDrawable(v.getResources().getDrawable(R.drawable.bean));
-        }
-        else{
-                ib.setImageDrawable(v.getResources().getDrawable(R.drawable.cheese));
-        }
     }
 
     private void initImageButtonList(){
@@ -179,6 +79,67 @@ public class GameActivity extends Activity implements View.OnClickListener {
 
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.foodImageTopLeft:
+                gameMapStatusObserver(0,0,gridTopLeft,v);
+                break;
+
+            case R.id.foodImageTopMid:
+                gameMapStatusObserver(0,1,gridTopMid,v);
+                break;
+
+            case R.id.foodImageTopRight:
+                gameMapStatusObserver(0,2,gridTopRight,v);
+                break;
+
+            case R.id.foodImageMidleft:
+                gameMapStatusObserver(1,0,gridMidLeft,v);
+                break;
+
+            case R.id.foodImageMidMid:
+                gameMapStatusObserver(1,1,gridMidMid,v);
+                break;
+
+            case R.id.foodImageMidRight:
+                gameMapStatusObserver(1,2,gridMidRight,v);
+                break;
+
+            case R.id.foodImageButtomLeft:
+                gameMapStatusObserver(2,0,gridButtomLeft,v);
+                break;
+
+            case R.id.foodImageButtomMid:
+                gameMapStatusObserver(2,1,gridButtonMid,v);
+                break;
+
+            case R.id.foodImageButtomRight:
+                gameMapStatusObserver(2,2,gridButtonRight,v);
+                break;
+        }
+    }
+
+
+
+    private void gameMapStatusObserver(int x, int y, ImageButton ib, View v){
+        if (!gameController.isRatAlreadyHasFood(x, y)) {
+            gameController.addFoodToGrid(x, y);
+            drawFood(ib, v);
+            winningMsg();
+            gameController.checkIsGameEndedYet();
+        }
+    }
+
+    private void drawFood(ImageButton ib, View v) {
+        if(gameController.getActualFoodMsgForGUI().equals("o")){
+                ib.setImageDrawable(v.getResources().getDrawable(R.drawable.bean));
+        }
+        else{
+                ib.setImageDrawable(v.getResources().getDrawable(R.drawable.cheese));
+        }
+    }
+
     private void winningMsg(){
         if(gameController.getWinner().equals("O wins the game"))
             Toast.makeText(getApplicationContext(), "Rat eats Bean!", Toast.LENGTH_LONG).show();
@@ -187,4 +148,31 @@ public class GameActivity extends Activity implements View.OnClickListener {
         else if (gameController.getWinner().equals("Draw Game"))
             Toast.makeText(getApplicationContext(), "Draw Game", Toast.LENGTH_LONG).show();
     }
+
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.activity_game, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch(item.getItemId()){
+        case R.id.cleanButton:
+            for (int i=0; i <imageButtonList.size(); i++)
+                 cleanGameMap(imageButtonList.get(i));
+            return true;
+        
+        default:
+        	return super.onOptionsItemSelected(item);
+		}
+		
+	}
+	
+    private void cleanGameMap(ImageButton ib) {
+        ib.setImageDrawable(getResources().getDrawable(R.drawable.listempty));
+        gameController.clearMap();
+    }
+
 }

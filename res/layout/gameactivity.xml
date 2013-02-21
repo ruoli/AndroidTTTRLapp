@@ -10,22 +10,6 @@
                 android:weightSum="1.0">
 
 
-
-
-    <!--<GridView xmlns:android="http://schemas.android.com/apk/res/android"-->
-          <!--android:id="@+id/gridview"-->
-          <!--android:layout_width="250dp"-->
-          <!--android:layout_height="fill_parent"-->
-          <!--android:columnWidth="90dp"-->
-          <!--android:numColumns="3"-->
-          <!--android:verticalSpacing="15dp"-->
-          <!--android:horizontalSpacing="10dp"-->
-          <!--android:stretchMode="columnWidth"-->
-          <!--android:gravity="center"-->
-          <!--android:background="@drawable/gamegrid"-->
-          <!--android:layout_gravity="center"-->
-          <!--android:layout_centerHorizontal="true" android:layout_alignParentTop="true" android:layout_marginTop="17dp"/>-->
-
     <ImageButton
             android:layout_width="45dp"
             android:layout_height="45dp"
@@ -83,12 +67,12 @@
                android:layout_height="45dp" android:id="@+id/foodImageButtomRight"
                android:layout_alignLeft="@+id/foodImageTopRight" android:layout_alignTop="@+id/foodImageButtomLeft"
                android:background="@null"/>
-    <Button
-            android:layout_width="wrap_content"
+<!--     <Button 
+        	android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Reset"
             android:id="@+id/cleanButton"
-            android:layout_alignParentTop="@+id/gamegrid"/>
+            android:layout_alignParentTop="@+id/gamegrid"/> -->
 
 
 </RelativeLayout>

@@ -25,23 +25,22 @@ public class GameController extends Grid{  //extend grid, make abstract
         return s;
     }
 
-    public void addFoodToGridAndCheckWinnder(int x, int y) { //point class, and refact
+    public void addFoodToGrid(int x, int y) { //point class, and refact
         if (oTurn) {
-            isMyTurnDoTheMovement("o", "x", x, y);
+            super.addObjectToMap(x, y, LogicFoodType);
+            oTurn = false;
+            actualFoodMsgForGUI = "o";
+            LogicFoodType = "x";
             winner = super.checkTheWinner();
         } else {
-            isMyTurnDoTheMovement("x", "o", x, y);
+            super.addObjectToMap(x, y, LogicFoodType);
+            oTurn = true;
+            actualFoodMsgForGUI = "x";
+            LogicFoodType = "o";
             winner = super.checkTheWinner();
             
         }
 
-    }
-
-    private void isMyTurnDoTheMovement(String foodForGUI, String foodForBackend, int gridPositionX, int gridPoistionY){
-        super.addObjectToMap(gridPositionX, gridPoistionY, LogicFoodType);
-        oTurn = false;
-        actualFoodMsgForGUI = foodForGUI;
-        LogicFoodType = foodForBackend;
     }
 
     public String getActualFoodMsgForGUI() {
@@ -55,4 +54,6 @@ public class GameController extends Grid{  //extend grid, make abstract
     public Boolean isRatAlreadyHasFood(int x, int y){
         return (!super.getObjectFromCertainPosition(x, y).equals(""));
     }
+
+
 }

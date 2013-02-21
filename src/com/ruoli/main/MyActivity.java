@@ -32,7 +32,7 @@ public class MyActivity extends Activity
                     e.printStackTrace();
                 }
                 finally {
-                    Intent i = new Intent(MyActivity.this, GameActivity.class);
+                    Intent i = new Intent(MyActivity.this, GameStarterActivity.class);
                     startActivity(i);
                 }
             }

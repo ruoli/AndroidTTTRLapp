@@ -3,7 +3,9 @@
   <component name="AndroidDesignerProfile">
     <option name="fullProfile">
       <profile>
-        <option name="device" value="[None]" />
+        <option name="device" value="4in WVGA (Nexus S)" />
+        <option name="deviceConfiguration" value="Portrait" />
+        <option name="targetHashString" value="android-17" />
         <option name="theme" value="Theme" />
       </profile>
     </option>
@@ -22,30 +24,23 @@
     </option>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02fd998f-8f57-4fe9-a2ce-3c297f5c5ba0" name="Default" comment="test">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ruoli/main/GameActivity.java" afterPath="$PROJECT_DIR$/src/com/ruoli/main/GameActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ruoli/controller/GameController.java" afterPath="$PROJECT_DIR$/src/com/ruoli/controller/GameController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ruoli/controller/Grid.java" afterPath="$PROJECT_DIR$/src/com/ruoli/controller/Grid.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/ruoli/main/MyActivity.java" afterPath="$PROJECT_DIR$/src/com/ruoli/main/MyActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/gameactivity.xml" afterPath="$PROJECT_DIR$/res/layout/gameactivity.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
+    <list default="true" id="02fd998f-8f57-4fe9-a2ce-3c297f5c5ba0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TTTProj.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.java" changelist="02fd998f-8f57-4fe9-a2ce-3c297f5c5ba0" time="1361460321648" ignored="false" />
+    <file path="/fragment.java" changelist="02fd998f-8f57-4fe9-a2ce-3c297f5c5ba0" time="1360688468277" ignored="false" />
     <file path="/a.java" changelist="02fd998f-8f57-4fe9-a2ce-3c297f5c5ba0" time="1360443052790" ignored="false" />
     <file path="/MyActivity.java" changelist="02fd998f-8f57-4fe9-a2ce-3c297f5c5ba0" time="1360449249548" ignored="false" />
-    <file path="/Dummy.txt" changelist="02fd998f-8f57-4fe9-a2ce-3c297f5c5ba0" time="1361477320107" ignored="false" />
-    <file path="/GameActivity.java" changelist="02fd998f-8f57-4fe9-a2ce-3c297f5c5ba0" time="1361207250226" ignored="false" />
-    <file path="/gameactivity.xml" changelist="02fd998f-8f57-4fe9-a2ce-3c297f5c5ba0" time="1361191070232" ignored="false" />
+    <file path="/Dummy.txt" changelist="02fd998f-8f57-4fe9-a2ce-3c297f5c5ba0" time="1360751241564" ignored="false" />
+    <file path="/GameActivity.java" changelist="02fd998f-8f57-4fe9-a2ce-3c297f5c5ba0" time="1360618955658" ignored="false" />
+    <file path="/gameactivity.xml" changelist="02fd998f-8f57-4fe9-a2ce-3c297f5c5ba0" time="1360523869532" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="02fd998f-8f57-4fe9-a2ce-3c297f5c5ba0" time="1360619703889" ignored="false" />
     <file path="/main.xml" changelist="02fd998f-8f57-4fe9-a2ce-3c297f5c5ba0" time="1360448976690" ignored="false" />
     <file path="/ImageAdapter.java" changelist="02fd998f-8f57-4fe9-a2ce-3c297f5c5ba0" time="1360451384176" ignored="false" />
-    <file path="/GameController.java" changelist="02fd998f-8f57-4fe9-a2ce-3c297f5c5ba0" time="1361205258952" ignored="false" />
-    <file path="/Grid.java" changelist="02fd998f-8f57-4fe9-a2ce-3c297f5c5ba0" time="1361207198243" ignored="false" />
-    <file path="/a.xml" changelist="02fd998f-8f57-4fe9-a2ce-3c297f5c5ba0" time="1361460277361" ignored="false" />
+    <file path="/GameController.java" changelist="02fd998f-8f57-4fe9-a2ce-3c297f5c5ba0" time="1360689606961" ignored="false" />
+    <file path="/Grid.java" changelist="02fd998f-8f57-4fe9-a2ce-3c297f5c5ba0" time="1360618044837" ignored="false" />
+    <file path="$APPLICATION_HOME_DIR$/plugins/android/lib/android.jar!/org/jetbrains/android/android.xsd" changelist="02fd998f-8f57-4fe9-a2ce-3c297f5c5ba0" time="1360751720827" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,15 +99,81 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="activity_game_starter.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/layout/activity_game_starter.xml">
+      <file leaf-file-name="GameActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ruoli/main/GameActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="126" column="0" selection-start="4585" selection-end="4585" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ruoli/main/MyActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="40" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ruoli/controller/GameController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="9" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="43" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Grid.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/ruoli/controller/Grid.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="93" column="20" selection-start="2390" selection-end="2390" vertical-scroll-proportion="0.34350133">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageAdapter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ruoli/controller/ImageAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="46" selection-start="1376" selection-end="1376" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gameactivity.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/gameactivity.xml">
           <provider editor-type-id="android-designer">
             <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="65" column="39" selection-start="2892" selection-end="2892" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="9" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -135,23 +196,23 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/com/ruoli/test/Grid.java" />
-        <option value="$PROJECT_DIR$/src/com/ruoli/controller/ImageAdapter.java" />
-        <option value="$PROJECT_DIR$/gen/com/ruoli/main/Manifest.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/res/layout/gameactivity.xml" />
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/src/com/ruoli/main/MyActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/ruoli/controller/GameController.java" />
+        <option value="$PROJECT_DIR$/src/com/ruoli/controller/ImageAdapter.java" />
+        <option value="$PROJECT_DIR$/gen/com/ruoli/main/Manifest.java" />
         <option value="$PROJECT_DIR$/src/com/ruoli/main/GameActivity.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/layout/gameactivity.xml" />
         <option value="$PROJECT_DIR$/src/com/ruoli/controller/Grid.java" />
+        <option value="$PROJECT_DIR$/src/com/ruoli/controller/GameController.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="20" />
-    <option name="y" value="47" />
-    <option name="width" value="1477" />
-    <option name="height" value="893" />
+    <option name="x" value="1683" />
+    <option name="y" value="40" />
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -197,7 +258,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -214,28 +274,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="TTTProj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TTTProj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TTTProj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ruoli" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="npc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -369,26 +407,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TTTProj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TTTProj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -422,7 +443,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="options.lastSelected" value="preferences.sourceCode.XML" />
+    <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
     <property name="AndroidLayoutSelectedEditor" value="text-editor" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -749,20 +770,15 @@
       <created>1360616316468</created>
       <updated>1360616316468</updated>
     </task>
-    <task id="LOCAL-00004" summary="test">
-      <created>1361201931027</created>
-      <updated>1361201931027</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="20" y="47" width="1477" height="893" extended-state="0" />
+    <frame x="1683" y="40" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32974684" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -778,15 +794,16 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2746331" sideWeight="0.67418545" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38220552" sideWeight="0.99502176" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28335723" sideWeight="0.6128205" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3871795" sideWeight="0.99502176" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855093" sideWeight="0.6128205" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855093" sideWeight="0.6128205" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32974684" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32581455" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -863,6 +880,54 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/ruoli/controller/GameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="1" selection-start="878" selection-end="878" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="19" selection-start="748" selection-end="748" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ruoli/controller/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="5" selection-start="2133" selection-end="2133" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ruoli/controller/ImageAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="46" selection-start="1376" selection-end="1376" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/gameactivity.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="42" selection-start="2975" selection-end="2975" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="9" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -870,76 +935,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gen/com/ruoli/main/R.java">
+    <entry file="file://$PROJECT_DIR$/gen/com/ruoli/main/Manifest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="19" selection-start="133" selection-end="133" vertical-scroll-proportion="0.101809956">
+        <state line="3" column="19" selection-start="140" selection-end="140" vertical-scroll-proportion="0.054545455" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ruoli/controller/ImageAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="46" selection-start="1376" selection-end="1376" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="43" selection-start="298" selection-end="298" vertical-scroll-proportion="0.116883114">
+        <state line="6" column="9" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/gameactivity.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="0" selection-start="3728" selection-end="3728" vertical-scroll-proportion="0.60306406">
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ruoli/controller/Grid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="17" selection-start="3791" selection-end="3791" vertical-scroll-proportion="0.61764705">
+        <state line="65" column="39" selection-start="2892" selection-end="2892" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ruoli/main/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="1" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.7941176">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ruoli/controller/GameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="0" selection-start="1430" selection-end="1430" vertical-scroll-proportion="0.7647059">
+        <state line="9" column="40" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ruoli/main/GameActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="9" selection-start="4926" selection-end="4926" vertical-scroll-proportion="0.0">
+        <state line="126" column="0" selection-start="4585" selection-end="4585" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_game_starter.xml">
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="6" column="43" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ruoli/controller/GameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="9" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ruoli/controller/Grid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="20" selection-start="2390" selection-end="2390" vertical-scroll-proportion="0.34350133">
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
