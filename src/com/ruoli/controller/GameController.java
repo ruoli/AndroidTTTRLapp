@@ -1,5 +1,7 @@
 package com.ruoli.controller;
 
+import com.ruoli.npc.NPC;
+
 /**
  * Created with IntelliJ IDEA.
  * User: apple
@@ -9,13 +11,14 @@ package com.ruoli.controller;
  */
 public class GameController extends Grid{  //extend grid, make abstract
 
-    String LogicFoodType, actualFoodMsgForGUI;
+    String foodTypeForBackend, actualFoodMsgForGUI;
     Boolean oTurn = true;
+    Boolean npcsTurn = true;
     String winner = "";
 
     public GameController(){
         super();
-        LogicFoodType = checkWhoMovesFirst();
+        foodTypeForBackend = checkWhoMovesFirst();
     }
 
     private String checkWhoMovesFirst() {
@@ -25,22 +28,25 @@ public class GameController extends Grid{  //extend grid, make abstract
         return s;
     }
 
-    public void addFoodToGrid(int x, int y) { //point class, and refact
+    public void addFoodToGrid(int x, int y) {
+        npcsTurn=true;
+        gameMovementLogic(x,y);
+    }
+
+    private void gameMovementLogic(int x, int y){
         if (oTurn) {
-            super.addObjectToMap(x, y, LogicFoodType);
+            super.addObjectToMap(x, y, foodTypeForBackend);
             oTurn = false;
             actualFoodMsgForGUI = "o";
-            LogicFoodType = "x";
+            foodTypeForBackend = "x";
             winner = super.checkTheWinner();
         } else {
-            super.addObjectToMap(x, y, LogicFoodType);
+            super.addObjectToMap(x, y, foodTypeForBackend);
             oTurn = true;
             actualFoodMsgForGUI = "x";
-            LogicFoodType = "o";
+            foodTypeForBackend = "o";
             winner = super.checkTheWinner();
-            
         }
-
     }
 
     public String getActualFoodMsgForGUI() {
@@ -55,5 +61,20 @@ public class GameController extends Grid{  //extend grid, make abstract
         return (!super.getObjectFromCertainPosition(x, y).equals(""));
     }
 
+    public void npcMove(){
+        NPC npc = new NPC();
+        if(npcsTurn){
+            int x = npc.getX();
+            int y = npc.getY();
+            if (!isRatAlreadyHasFood(x,y)){
+                gameMovementLogic(x,y);
+                winner = super.checkTheWinner();
+                npcsTurn=false;
+            }
+            else {
+                npcMove();
+            }
 
+        }
+    }
 }

@@ -7,16 +7,16 @@ public class NPC {
 	Random randomGenerator = new Random();
 	
 	public NPC(){
-		npcGenerateXposition();
-		npcGenerateYposition();
+		npcGenerateXPosition();
+		npcGenerateYPosition();
 	}
 	
-	public int npcGenerateXposition(){
+	public int npcGenerateXPosition(){
 		x = randomGenerator.nextInt(2);
 		return x;
 	}
 	
-	public int npcGenerateYposition(){
+	public int npcGenerateYPosition(){
 		y = randomGenerator.nextInt(2);
 		return y;
 	}
