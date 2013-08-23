@@ -1,14 +1,14 @@
 package com.ruoli.main;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -29,9 +29,12 @@ public class GameActivity extends Activity implements View.OnClickListener {
     GameController gameController;
 
     List<ImageButton> imageButtonList;
+    ImageButton[][] gameBoardButtons=new ImageButton[3][3];
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.gameactivity);
 
         gridTopLeft = (ImageButton)findViewById(R.id.foodImageTopLeft);
@@ -61,6 +64,7 @@ public class GameActivity extends Activity implements View.OnClickListener {
         gameController = new GameController();
 
         initImageButtonList();
+        initButtomMapForNpcMove();
 
     }
 
@@ -80,65 +84,109 @@ public class GameActivity extends Activity implements View.OnClickListener {
         imageButtonList.add(gridButtonRight);
     }
 
+    private void initButtomMapForNpcMove(){
+        //gameBoardButtons = new ImageButton[2][2];
+
+        gameBoardButtons[0][0] = gridTopLeft;
+        gameBoardButtons[0][1] = gridTopMid;
+        gameBoardButtons[0][2] = gridTopRight;
+
+        gameBoardButtons[1][0] = gridMidLeft;
+        gameBoardButtons[1][1] = gridMidMid;
+        gameBoardButtons[1][2] = gridMidRight;
+
+        gameBoardButtons[2][0] = gridButtomLeft;
+        gameBoardButtons[2][1] = gridButtonMid;
+        gameBoardButtons[2][2] = gridButtonRight;
+    }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.foodImageTopLeft:
+                if(gameController.getObjectFromCertainPosition(0,0).equals("")){
                 gameMapStatusObserver(0,0,gridTopLeft,v);
                 npcMovement(v);
+                }
                 break;
 
             case R.id.foodImageTopMid:
+                if(gameController.getObjectFromCertainPosition(0,1).equals("")){
                 gameMapStatusObserver(0,1,gridTopMid,v);
                 npcMovement(v);
+                }
                 break;
 
             case R.id.foodImageTopRight:
+                if(gameController.getObjectFromCertainPosition(0,2).equals("")){
                 gameMapStatusObserver(0,2,gridTopRight,v);
                 npcMovement(v);
+                }
                 break;
 
             case R.id.foodImageMidleft:
+                if(gameController.getObjectFromCertainPosition(1,0).equals("")){
                 gameMapStatusObserver(1,0,gridMidLeft,v);
                 npcMovement(v);
+                }
                 break;
 
             case R.id.foodImageMidMid:
+                if(gameController.getObjectFromCertainPosition(1,1).equals("")){
                 gameMapStatusObserver(1,1,gridMidMid,v);
                 npcMovement(v);
+                }
                 break;
 
             case R.id.foodImageMidRight:
+                if(gameController.getObjectFromCertainPosition(1,2).equals("")){
                 gameMapStatusObserver(1,2,gridMidRight,v);
                 npcMovement(v);
+                }
                 break;
 
             case R.id.foodImageButtomLeft:
+                if(gameController.getObjectFromCertainPosition(2,0).equals("")){
                 gameMapStatusObserver(2,0,gridButtomLeft,v);
                 npcMovement(v);
+                }
                 break;
 
             case R.id.foodImageButtomMid:
+                if(gameController.getObjectFromCertainPosition(2,1).equals("")){
                 gameMapStatusObserver(2,1,gridButtonMid,v);
                 npcMovement(v);
+                }
                 break;
 
             case R.id.foodImageButtomRight:
+                if(gameController.getObjectFromCertainPosition(2,2).equals("")){
                 gameMapStatusObserver(2,2,gridButtonRight,v);
                 npcMovement(v);
+                }
                 break;
         }
     }
 
     private void npcMovement(View v) {
-        NPC npc = new NPC();
-        int x = npc.getX();
-        int y = npc.getY();
-        Random random = new Random();
-        int listPosition = random.nextInt(8);
-        ImageButton ib = imageButtonList.get(listPosition);
-        gameMapStatusObserver(x,y,ib,v);
+        if(gameController.getWinner().equals("No winner")){
+            NPC npc = new NPC();
+            int x;
+            int y;
+
+            do {
+                x = npc.npcGenerateXPosition();
+                y = npc.npcGenerateYPosition();
+            }
+            while (!gameController.getObjectFromCertainPosition(x, y).equals(""));
+
+            initButtomMapForNpcMove();
+            ImageButton ib = gameBoardButtons[x][y];
+            gameMapStatusObserver(x, y, ib, v);
+        }
+
     }
+
 
     private void gameMapStatusObserver(int x, int y, ImageButton ib, View v){
         if (!gameController.isRatAlreadyHasFood(x, y)) {

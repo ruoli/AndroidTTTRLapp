@@ -40,6 +40,7 @@ public class GameController extends Grid{  //extend grid, make abstract
             actualFoodMsgForGUI = "o";
             foodTypeForBackend = "x";
             winner = super.checkTheWinner();
+
         } else {
             super.addObjectToMap(x, y, foodTypeForBackend);
             oTurn = true;
@@ -48,6 +49,8 @@ public class GameController extends Grid{  //extend grid, make abstract
             winner = super.checkTheWinner();
         }
     }
+
+
 
     public String getActualFoodMsgForGUI() {
         return actualFoodMsgForGUI;
@@ -61,20 +64,5 @@ public class GameController extends Grid{  //extend grid, make abstract
         return (!super.getObjectFromCertainPosition(x, y).equals(""));
     }
 
-    public void npcMove(){
-        NPC npc = new NPC();
-        if(npcsTurn){
-            int x = npc.getX();
-            int y = npc.getY();
-            if (!isRatAlreadyHasFood(x,y)){
-                gameMovementLogic(x,y);
-                winner = super.checkTheWinner();
-                npcsTurn=false;
-            }
-            else {
-                npcMove();
-            }
 
-        }
-    }
 }
