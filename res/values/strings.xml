@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">TTTProj</string>
+    <string name="app_name">RLTicTacToe</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_Reset">Reset</string>
     <string name="title_activity_game_starter">GameStarterActivity</string>
-    <string name="title_activity_option">OptionActivity</string>
     <string name="title_activity_game">GameActivity</string>
 
 </resources>

@@ -1,78 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:background="@drawable/gamegrid"
-                android:id="@+id/gameGrid"
-                android:weightSum="1.0">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              android:paddingLeft="16dp"
+              android:paddingRight="16dp"
+              android:background="#E8A2B4"
+              android:id="@+id/gameGrid">
 
 
-    <ImageButton
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:id="@+id/foodImageTopLeft"
-            android:layout_alignLeft="@+id/foodImageMidleft" android:layout_alignParentTop="true"
-            android:layout_marginTop="95dp"
-            android:background="@drawable/ic_launcher"/>
 
-    <ImageButton android:layout_width="45dp"
-               android:layout_height="45dp"
-               android:id="@+id/foodImageTopMid"
-               android:layout_alignParentLeft="true"
-               android:layout_marginLeft="130dp"
-               android:layout_alignTop="@+id/foodImageTopLeft"
-               android:background="@null"/>
-
-    <ImageButton android:layout_width="45dp"
-               android:layout_height="45dp"
-               android:id="@+id/foodImageTopRight"
-               android:layout_alignParentLeft="true" android:layout_marginLeft="210dp"
-               android:layout_alignTop="@+id/foodImageTopLeft"
-               android:background="@null"/>
-
-    <ImageButton android:layout_width="45dp"
-               android:layout_height="45dp"
-               android:id="@+id/foodImageMidleft"
-               android:layout_alignParentLeft="true"
-               android:layout_marginLeft="38dp"
-               android:layout_alignParentTop="true"
-               android:layout_marginTop="245dp"
-               android:background="@null"/>
-
-    <ImageButton android:layout_width="45dp"
-               android:layout_height="45dp" android:id="@+id/foodImageMidMid"
-               android:layout_centerHorizontal="true" android:layout_alignTop="@+id/foodImageMidleft"
-               android:background="@null"/>
-
-    <ImageButton android:layout_width="45dp"
-               android:layout_height="45dp" android:id="@+id/foodImageMidRight"
-               android:layout_alignRight="@+id/foodImageTopRight" android:layout_alignTop="@+id/foodImageMidleft"
-               android:background="@null"/>
-
-    <ImageButton android:layout_width="45dp"
-               android:layout_height="45dp" android:id="@+id/foodImageButtomLeft"
-               android:layout_alignLeft="@+id/foodImageTopLeft" android:layout_alignParentTop="true"
-               android:layout_marginTop="385dp"
-               android:background="@null"/>
-
-    <ImageButton android:layout_width="45dp"
-               android:layout_height="45dp" android:id="@+id/foodImageButtomMid"
-               android:layout_centerHorizontal="true" android:layout_alignTop="@+id/foodImageButtomLeft"
-               android:background="@null"/>
-
-    <ImageButton android:layout_width="45dp"
-               android:layout_height="45dp" android:id="@+id/foodImageButtomRight"
-               android:layout_alignLeft="@+id/foodImageTopRight" android:layout_alignTop="@+id/foodImageButtomLeft"
-               android:background="@null"/>
-<!--     <Button 
-        	android:layout_width="wrap_content"
+    <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Reset"
-            android:id="@+id/cleanButton"
-            android:layout_alignParentTop="@+id/gamegrid"/> -->
+            android:orientation="horizontal"
+            android:layout_weight="3">
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/ratbelly"
+                android:layout_weight="3">
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:id="@+id/foodImageTopLeft"
+                    android:background="@drawable/emptysquare"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/ratbelly"
+                android:layout_weight="3">
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:id="@+id/foodImageTopMid"
+                    android:background="@drawable/emptysquare"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/ratbelly"
+                android:layout_weight="3">
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:id="@+id/foodImageTopRight"
+                    android:background="@drawable/emptysquare"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
 
 
-</RelativeLayout>
+
+
+
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="3">
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/ratbelly"
+                android:layout_weight="3">
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:id="@+id/foodImageMidleft"
+                    android:background="@drawable/emptysquare"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/ratbelly"
+                android:layout_weight="3">
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:id="@+id/foodImageMidMid"
+                    android:background="@drawable/emptysquare"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/ratbelly"
+                android:layout_weight="3">
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:id="@+id/foodImageMidRight"
+                    android:background="@drawable/emptysquare"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="3">
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/ratbelly"
+                android:layout_weight="3">
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:id="@+id/foodImageButtomLeft"
+                    android:background="@drawable/emptysquare"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/ratbelly"
+                android:layout_weight="3">
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:id="@+id/foodImageButtomMid"
+                    android:background="@drawable/emptysquare"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/ratbelly"
+                android:layout_weight="3">
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:id="@+id/foodImageButtomRight"
+                    android:background="@drawable/emptysquare"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

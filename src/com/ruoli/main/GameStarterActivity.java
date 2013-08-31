@@ -9,10 +9,14 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.LinearLayout;
+
+import com.google.ads.*;
 
 public class GameStarterActivity extends Activity {
 
 	Button singleGameButton, pvpButton;
+    AdView adView;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -24,10 +28,18 @@ public class GameStarterActivity extends Activity {
 		singleGameButton.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View arg0) {
-				Intent i = new Intent(GameStarterActivity.this, OptionActivity.class);
+				Intent i = new Intent(GameStarterActivity.this, GameActivity.class);
                 startActivity(i);
 			}
 		});
+
+        //add ad.
+        adView = new AdView(this, AdSize.BANNER, "a1521917b9b8235");
+
+        LinearLayout layout = (LinearLayout)findViewById(R.id.gameStarterActivityLayout);
+        layout.addView(adView);
+
+        adView.loadAd(new AdRequest());
 	}
 
 	@Override
@@ -37,4 +49,11 @@ public class GameStarterActivity extends Activity {
 		return true;
 	}
 
+    @Override
+    protected void onDestroy() {
+        if(adView != null){
+            adView.destroy();
+        }
+        super.onDestroy();
+    }
 }
